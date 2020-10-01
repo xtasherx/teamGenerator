@@ -18,15 +18,16 @@ An interactive CLI app to generate a quick look at your team.
 
 ## Installation
 
-clone repo
-
+Clone repo from https://github.com/xtasherx/teamGenerator 
+``` 
+npm install
+```
 ---
 
 ## Usage
 
-Clone repo from https://github.com/xtasherx/teamGenerator 
+
 ```
-npm install
 node app.js
 ```
 ---
