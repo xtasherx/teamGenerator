@@ -24,15 +24,20 @@ clone repo
 
 ## Usage
 
+Clone repo from https://github.com/xtasherx/teamGenerator 
+```
+npm install
+node app.js
+```
 ---
 
 ## Tests
 
-requires jest. 
+Requires jest. 
 ```
 npm install jest
 ```
-to run test
+To run test:
 ``` 
 npm run test
 ```
@@ -42,7 +47,7 @@ npm run test
 
 ## Contributions
 
-Pull requests welcome
+Pull requests welcome. Open an issue describing the changes you'd like to make. 
 
 ---
 
