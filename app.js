@@ -8,7 +8,21 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
+// array to hold employee data
 const employees = [];
+
+// function to write data to page
+const generateTeam = () => {
+  const renderHTML = render(employees);
+  console.log(employees);
+  fs.writeFile(outputPath, renderHTML, function (err) {
+    if (err) {
+      return console.log(err);
+    }
+
+    console.log("Your team has been generated");
+  });
+};
 
 const collectInput = async (input = []) => {
   const questions = [
@@ -84,13 +98,9 @@ const main = async () => {
         employee.intSchool
       );
       employees.push(int);
+      generateTeam(employees);
     }
   });
 };
 
 main();
-
-function buildPage() {
-  fs.writeFileSync(outputPath, render(employees), "utf-8");
-}
-buildPage();
