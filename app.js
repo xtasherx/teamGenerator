@@ -14,7 +14,6 @@ const employees = [];
 // function to write data to page
 const generateTeam = () => {
   const renderHTML = render(employees);
-  console.log(employees);
   fs.writeFile(outputPath, renderHTML, function (err) {
     if (err) {
       return console.log(err);
@@ -24,6 +23,7 @@ const generateTeam = () => {
   });
 };
 
+// asks questions and collects input
 const collectInput = async (input = []) => {
   const questions = [
     {
@@ -82,7 +82,8 @@ const main = async () => {
         employee.mgrNumber
       );
       employees.push(mgr);
-    } else if (employee.empRole === "Engineer") {
+    }
+    if (employee.empRole === "Engineer") {
       const eng = new Engineer(
         employee.empName,
         employee.empID,
@@ -90,7 +91,8 @@ const main = async () => {
         employee.engGitUser
       );
       employees.push(eng);
-    } else {
+    }
+    if (employee.empRole === "Intern") {
       const int = new Intern(
         employee.empName,
         employee.empID,
