@@ -100,8 +100,9 @@ const main = async () => {
         employee.intSchool
       );
       employees.push(int);
-      generateTeam(employees);
     }
+    generateTeam(employees);
+    console.log(employees);
   });
 };
 
