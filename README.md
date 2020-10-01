@@ -28,7 +28,15 @@ clone repo
 
 ## Tests
 
-requires jest. npm run test.
+requires jest. 
+```
+npm install jest
+```
+to run test
+``` 
+npm run test
+```
+
 
 ---
 
